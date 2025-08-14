@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="navbar-container">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="public/video/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav>
+            <ul class="nav-left">
+                <li>
+                    Shop <i class="fa-solid fa-chevron-down"></i>
+                </li>
+
+                <li id="coffee-menu">
+    Coffee <i class="fa-solid fa-chevron-down"></i>
+</li>
+
+<div class="page-overlay">
+    <div class="coffee-content">
+        <ul>
+            <h3>Current Coffee</h3>
+            <li>All Coffee</li>
+            <li>House Coffee</li>
+            <li>Single Origin</li>
+            <li>Clifton Capsules</li>
+        </ul>
+    </div>
+    <div class="image-content">
+        <div>
+            <img src="public/images/gallery/g-2.jpg" alt="coffee" height="200" width="300">
+            <h1>Condence Expresso</h1>
+            <h3>Autumn edition</h3>
+        </div>
+        <div>
+            <img src="public/images/gallery/g-2.jpg" alt="coffee" height="200" width="300">
+            <h1>Condence Expresso</h1>
+            <h3>Autumn edition</h3>
+        </div>
+    </div>
+</div>
+
+
+                <li>
+                    Accessories <i class="fa-solid fa-chevron-down"></i>
+                </li>
+            </ul>
+            <h1 class="logo"><strong>CLIFTON</strong></h1>
+            <!-- Navbar Right Section -->
+            <!-- Navbar Right Section -->
+            <ul class="nav-right">
+                <li>Wholesale</li>
+                <li>Education</li>
+                <li>Our Ethics</li>
+
+                <div class="icons">
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </ul>
+
+            <!-- Search Overlay -->
+            <div id="search-overlay">
+                <span id="close-search">&times;</span>
+                <div class="search-box">
+                    <input type="text" placeholder="Type to search...">
+                </div>
+            </div>
+
+            <!--Cart overlay-->
+            <div id="cart-overlay">
+                <div class="cart-box">
+                    
+                <span id="close-cart">&times;</span>
+                    <h1>Shopping Cart(0)</h1>
+                    <hr>
+                    <p>Your cart is currently empty!</p>
+                    <button class="button">Continuse browsing</button>
+                </div>
+            </div>
+
+            <div class="center-content">
+                <h1><strong>Bold Coffee Moment</strong></h1>
+                <button>Shop Now</button>
+            </div>
+        </nav>
+
+            
+    </div>
+    <!--collection section-->
+    <div class="product-slider-section">
+        <h1><strong>Our Collections</strong></h1>
+
+        <!-- Left Arrow -->
+        <div class="product-arrow left"onclick="plusDivs(-1)" >&#10094;</div>
+
+        <!-- Slider Container -->
+        <div class="product-slider">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="public/images/collection/col-01.jpg" alt="cat1"class="mySlides">
+                    <div class="product-info">
+                        <h2>Product</h2>
+                        <button>Shop Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="public/images/collection/col-02.jpg" alt="cat2" class="mySlides">
+                    <div class="product-info">
+                        <h2>Product</h2>
+                        <button>Shop Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="public/images/collection/col-03.jpg" alt="cat4" class="mySlides">
+                    <div class="product-info">
+                        <h2>Product</h2>
+                        <button>Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <div class="product-arrow right" onclick="plusDivs(1)">&#10095;</div>
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="new-products-section">
+        <h1>New Products</h1>
+        <h3>Discover our premium coffee collection crafted for every taste!</h3>
+
+        <div class="new-products-container">
+
+            <!-- Left Image Grid -->
+            <div class="products-grid">
+                <div class="product-box">
+                    <img src="public/images/new-product/np-1.jpg" alt="Product 1">
+                    <a href="#" class="overlay">Read More</a>
+                </div>
+                <div class="product-box">
+                    <img src="public/images/new-product/np-2.jpg" alt="Product 2">
+                    <a href="#" class="overlay">Read More</a>
+                </div>
+                <div class="product-box">
+                    <img src="public/images/new-product/np-3.jpg" alt="Product 3">
+                    <a href="#" class="overlay">Read More</a>
+                </div>
+                <div class="product-box">
+                    <img src="public/images/new-product/np-4.jpg" alt="Product 4">
+                    <a href="#" class="overlay">Read More</a>
+                </div>
+            </div>
+
+
+
+            <!-- Right Content -->
+            <div class="product-section" style="margin:0; padding:0;">
+                <!-- Buttons -->
+                <div class="product-buttons">
+                    <button class="active">Coffee</button>
+                    <button>Capsule</button>
+                    <button>All</button>
+                </div>
+
+
+                <!-- Products -->
+                <div class="images">
+    <!-- Left Arrow -->
+    
+
+    <!-- Products Row -->
+    <div class="product">
+        <button class="errow" onclick="plusDivs(-1)">&#10094;</button>
+        <div class="product-1 product-card">
+            <div class="product-image">
+                <img src="public/images/mini-card/mc-1.jpg" alt="Panama Coffee" class="img1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <h2>Panama Coffee</h2>
+            <p>Introducing El Vergel Estate, a vibrant new coffee.</p>
+            <span class="price">£13.50</span>
+        </div>
+
+        <div class="product-2 product-card">
+            <div class="product-image">
+                <img src="public/images/mini-card/mc-2.jpg" alt="Peru Coffee">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <h2>Peru Coffee</h2>
+            <p>Introducing El Vergel Estate, a vibrant new coffee.</p>
+            <span class="price">£13.50</span>
+        </div>
+<button class="errow" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <!-- Right Arrow -->
+    
+</div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="container">
+        <div class="coffee-banner">
+            <div class="coffee-content">
+                <h3>Chiffon Coffee - Speciality Coffee</h3>
+                <h1>Shop Coffee</h1>
+                <p>Discover your perfect cup of coffee – crafted to match your taste and style.</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <section class="capsule-section">
+        <!-- Left Content -->
+        <div class="capsule-text">
+            <h1>Clifton Capsule</h1>
+            <p>
+                Discover your perfect cup of coffee – crafted to match your taste and style.
+                Discover your perfect cup of coffee – crafted to match your taste and style.
+            </p>
+            <button>Shop Now</button>
+        </div>
+
+        <!-- Right Image + Circles -->
+        <div class="capsule-image-container">
+            <img src="public/images/capsule/capsule-product.jpg" alt="Coffee Product" class="capsule-image">
+
+            <!-- Vertical Circles -->
+            <div class="circle-list">
+                <div class="circle active"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="slider">
+ <!-- Left arrow -->
+  <button class="product-arrow left" aria-label="Previous product" onclick="plusDivs(-1)">&#10094;</button>
+        <div class="gallery">
+            <!--<div class="product-arrow left">&#10094;</div>-->
+            <div class="image-container">
+                <img src="public/images/gallery/g-3.jpg" alt="Product">
+                <h3>Peru</h3>
+                <p class="price">$25.99</p>
+                <p class="rating">★★★★★</p>
+
+                <!-- Product Info Overlay -->
+                <div class="form-overlay">
+                    <div class="line-between"><span>Origin</span><span class="gap-line"></span><span>Colombia</span>
+                    </div>
+                    <div class="line-between"><span>Type</span><span class="gap-line"></span><span>Arabica</span></div>
+                    <div class="line-between"><span>Roast</span><span class="gap-line"></span><span>Medium</span></div>
+                    <h3>Cliffon Coffee Colombia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <button class="button" onclick="showForm(this)">Buy now</button>
+                    <a href="#">Read more</a>
+                </div>
+
+                <!-- Form Overlay -->
+                <div class="form-container">
+                    <h3>Clifton Coffee Colimbia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <div class="form-row">
+                        <input type="weight" placeholder="Weight">
+                        <input type="roast" placeholder="Roast">
+                        <input type="text" placeholder="wholesale">
+                    </div>
+                    <input type="number" class="form-quantity" placeholder="Quantity" min="1" value="1">
+                    <button class="button">Add to Cart</button>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="public/images/gallery/g-3.jpg" alt="Product">
+                <h3>Peru</h3>
+                <p class="price">$25.99</p>
+                <p class="rating">★★★★★</p>
+
+                <!-- Product Info Overlay -->
+                <div class="form-overlay">
+                    <div class="line-between"><span>Origin</span><span class="gap-line"></span><span>Colombia</span>
+                    </div>
+                    <div class="line-between"><span>Type</span><span class="gap-line"></span><span>Arabica</span></div>
+                    <div class="line-between"><span>Roast</span><span class="gap-line"></span><span>Medium</span></div>
+                    <h3>Cliffon Coffee Colombia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <button class="button" onclick="showForm(this)">Buy now</button>
+                    <a href="#">Read more</a>
+                </div>
+
+                <!-- Form Overlay -->
+                <div class="form-container">
+                    <h3>Indonesia Coffee</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <div class="form-row">
+                        <input type="weight" placeholder="Weight">
+                        <input type="roast" placeholder="Roast">
+                        <input type="text" placeholder="wholesale">
+                    </div>
+                    <input type="number" class="form-quantity" placeholder="Quantity" min="1" value="1">
+                    <button class="button">Add to Cart</button>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="public/images/gallery/g-3.jpg" alt="Product">
+                <h3>Peru</h3>
+                <p class="price">$25.99</p>
+                <p class="rating">★★★★★</p>
+                <!-- Product Info Overlay -->
+                <div class="form-overlay">
+                    <div class="line-between"><span>Origin</span><span class="gap-line"></span><span>Colombia</span>
+                    </div>
+                    <div class="line-between"><span>Type</span><span class="gap-line"></span><span>Arabica</span></div>
+                    <div class="line-between"><span>Roast</span><span class="gap-line"></span><span>Medium</span></div>
+                    <h3>Cliffon Coffee Colombia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <button class="button" onclick="showForm(this)">Buy now</button>
+                    <a href="#">Read more</a>
+                </div>
+
+                <!-- Form Overlay -->
+                <div class="form-container">
+                    <h3>Clifton Coffee Colimbia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <div class="form-row">
+                        <input type="weight" placeholder="Weight">
+                        <input type="roast" placeholder="Roast">
+                        <input type="text" placeholder="wholesale">
+                    </div>
+                    <input type="number" class="form-quantity" placeholder="Quantity" min="1" value="1">
+                    <button class="button">Add to Cart</button>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img src="public/images/gallery/g-3.jpg" alt="Product">
+                <h3>Peru</h3>
+                <p class="price">$25.99</p>
+                <p class="rating">★★★★★</p>
+                <!-- Product Info Overlay -->
+                <div class="form-overlay">
+                    <div class="line-between"><span>Origin</span><span class="gap-line"></span><span>Colombia</span>
+                    </div>
+                    <div class="line-between"><span>Type</span><span class="gap-line"></span><span>Arabica</span></div>
+                    <div class="line-between"><span>Roast</span><span class="gap-line"></span><span>Medium</span></div>
+                    <h3>Cliffon Coffee Colombia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+                    <button class="button" onclick="showForm(this)">Buy now</button>
+                    <a href="#">Read more</a>
+                </div>
+
+                <!-- Form Overlay -->
+                <div class="form-container">
+                    <h3>Clifton Coffee Colombia</h3>
+                    <h3>$ 13.50</h3>
+                    <div class="stars">★★★★★</div>
+
+                    <div class="form-row">
+                        <input type="weight" placeholder="Weight">
+                        <input type="roast" placeholder="Roast">
+                        <input type="text" placeholder="wholesale">
+                    </div>
+                    <input type="number" class="form-quantity" placeholder="Quantity" min="1" value="1">
+                    <button class="button">Add to Cart</button>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <!--<div class="product-arrow right">&#10095;</div>-->
+        </div>
+  <button class="product-arrow right" aria-label="Next product" onclick="plusDivs(+1)">&#10095;</button>
+        <!-- Pagination Circles -->
+        <div class="product-pagination">
+            <div class="circle active"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+
+    <div class="discover-section">
+        <div class="discover-top">
+            <div class="discover-image">
+                <img src="public/images/discover/dc-1.jpg" alt="image">
+                <div class="discover-content">
+                    <h2>Discover More</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+            <div class="discover-image">
+                <img src="public/images/discover/dc-2.jpg" alt="image">
+                <div class="discover-content">
+                    <h2>New Collection</h2>
+                    <p>Check out our latest arrivals and styles.</p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="discover-bottom">
+            <div class="discover-text">
+                <h1>Virtual Tour</h1>
+                <p>
+                    Discover our premium coffee collection crafted for every taste.
+                    Discover our premium coffee collection crafted for every taste. 
+                </p>
+                <button class="button">
+                    Read More</a>
+                </button>
+            </div>
+            <div class="discover-bottom-image">
+                <img src="public/images/discover/dc-3.jpg" alt="this is image">
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <h1 class="reviews-title">Thousands of 5 Star review</h1>
+
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="stars">★★★★★</p>
+                <p class="review-heading">All I can say is wow</p>
+                <p class="review-text">
+                    The coffee commeteer experience is incredible. It's like having a high
+                    cup of coffee from a boutique coffee shop at my fingertips.
+                </p>
+                <p class="review-author">Michal F</p>
+            </div>
+
+            <div class="review-card">
+                <p class="stars">★★★★★</p>
+                <p class="review-heading">All I can say is wow</p>
+                <p class="review-text">
+                    The coffee commeteer experience is incredible. It's like having a high
+                    cup of coffee from a boutique coffee shop at my fingertips.
+                </p>
+                <p class="review-author">Michal F</p>
+            </div>
+
+            <div class="review-card">
+                <p class="stars">★★★★★</p>
+                <p class="review-heading">All I can say is wow</p>
+                <p class="review-text">
+                    The coffee commeteer experience is incredible. It's like having a high
+                    cup of coffee from a boutique coffee shop at my fingertips.
+                </p>
+                <p class="review-author">Michal F</p>
+            </div>
+        </div>
+
+        <div class="review-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <p class="review-instagram">
+            <a href="#">@Cliftoncoffee</a>
+        </p>
+        <p class="review-follow">Follow us on instagram for the latest post!</p>
+    </div>
+    <div class="image-slider-section">
+
+        <!-- Images -->
+       <div class="image-slider">
+        <div class="image-wrapper">
+        <img src="public/images/coffee/cc-1.jpg" alt="this is image">
+        <div class="overlay-icon"><i class="fab fa-instagram"></i></div>
+    </div>
+    <div class="image-wrapper">
+        <img src="public/images/coffee/cc-2.jpg" alt="this is image">
+        <div class="overlay-icon"><i class="fab fa-instagram"></i></div>
+    </div>
+    <div class="image-wrapper">
+        <img src="public/images/coffee/cc-3.jpg" alt="this is image">
+        <div class="overlay-icon"><i class="fab fa-instagram"></i></div>
+    </div>
+    <div class="image-wrapper">
+        <img src="public/images/coffee/cc-4.jpg" alt="this is image">
+        <div class="overlay-icon"><i class="fab fa-instagram"></i></div>
+    </div>
+    <div class="image-wrapper">
+        <img src="public/images/coffee/cc-5.jpg" alt="this is image">
+        <div class="overlay-icon"><i class="fab fa-instagram"></i></div>
+    </div>
+       </div>
+
+
+        <!-- Dots -->
+        <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="newsletter-section">
+        <h1>Newsletter</h1>
+        <h3>The latest coffees offers and news from the Chiffon</h3>
+
+        <div class="newsletter-input">
+            <input type="text" placeholder="Enter your email here...">
+            <button>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-section certified">
+                <h3>Certified</h3>
+                <img src="public/images/logo/logo.png" alt="log">
+                <h3>Corporation</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h2>Shop</h2>
+                <p>Chiffon tea</p>
+                <p>Shop Coffee</p>
+                <p>Single Orign</p>
+                <p>Chiffon Capsulates</p>
+                <p>Unparallel Series</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Coffee</h2>
+                <p>All Coffee</p>
+                <p>Shop Coffee</p>
+                <p>Single Orign</p>
+                <p>Chiffon Capsulates</p>
+                <p>Unparallel Series</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Our ethos</h2>
+                <p>About us</p>
+                <p>Resources</p>
+                <p>Orign Form</p>
+                <p>Career</p>
+                <p>HQ Virtual Tour</p>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Contact us</h2>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>JohnDoe@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+92 300 1234567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Lahore, Pakistan</span>
+                </div>
+            </div>
+
+        </div>
+        <p class="footer-bottom">2025@Chiffon Coffee Roaster | Privacy Policy</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="responsive.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+/* Mobile view (max 768px) */
+@media (max-width: 768px) {
+    /* Nav-left me hamburger inject karo */
+    .nav-left {
+    position: relative;
+    padding-left: 35px; /* Space for hamburger */
+}
+
+/* Hamburger icon fixed top-left */
+.nav-left::before {
+    content: "\2630"; /* Unicode ☰ */
+    font-size: 26px;
+    position: fixed; /* Hamesha screen ke top par */
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: white;
+    z-index: 1001; /* Menu se upar */
+}
+
+/* Mobile menu open hone par */
+.nav-left.open {
+    position: absolute; /* Fixed so it overlays */
+    margin-top: initial;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 60px 0 15px; /* Top space for hamburger */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Open hone par list items */
+.nav-left.open li {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect */
+.nav-left.open li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+    /* Hide left and right menus */
+    .nav-left li,
+    .nav-right li {
+        display: none;
+    }
+
+    /* Logo center */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Icons right openly */
+    .nav-right .icons {
+        display: flex;
+        gap: 15px;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    
+    .product-slider {
+        flex-direction: column;
+    }
+    .product-image img {
+        width: 100%;
+    }
+    .bg-video{
+        width: 100%;
+    }
+
+    
+    .new-products-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+    }
+    /*slider section*/
+    
+
+    /*footer setion*/
+ .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Accordion Style */
+    .footer-section {
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        padding: 10px 0;
+    }
+
+    .footer-section h2 {
+        font-size: 16px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+         padding-left: 15px;
+    }
+
+    .footer-section h2::after {
+        content: "+";
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section .contact-item {
+        display: none;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* Certified + Contact ko ek line me rakhna */
+    .footer-section.certified,
+    .footer-section.contact {
+        border: none;
+    }
+
+    .footer-section.certified {
+        order: 99; /* neeche le aane ke liye */
+        text-align: left;
+    }
+
+     .footer-section.contact p,
+    .footer-section.contact .contact-item {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+    }
+/* Contact Us wale h2 ke samne se + hata do */
+.footer-section.contact h2::after {
+    content: none;
+}
+
+    /* Certified + Contact ko neeche ek line me */
+    .footer-section.certified {
+        order: 99;
+        text-align: left;
+    }
+
+    .footer-section.contact {
+        order: 100;
+        text-align: right;
+    }
+
+    /* Footer flex wrap */
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* Search Overlay */
+/* Search Overlay Base */
+#search-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full mobile width */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  overflow: hidden; /* Mobile pe scroll avoid */
+}
+
+/* Close button */
+#search-overlay #close-search {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Search box */
+#search-overlay .search-box {
+  width: 80%;
+  max-width: 600px;
+  border-bottom: 2px solid white;
+}
+
+#search-overlay .search-box input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+ #search-overlay .search-box {
+    width: 90%;
+    max-width: none;
+  }
+  #search-overlay .search-box input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  #search-overlay #close-search {
+    font-size: 30px;
+    right: 15px;
+    top: 10px;
+  }
+/*cart overlay*/
+#cart-overlay {
+  position: absolute;
+  float: left;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  /* Initially hidden */
+  flex-direction: column;
+  z-index: 999;
+}
+
+#cart-overlay.active {
+  display: flex;
+  /* Show when active */
+}
+
+#cart-overlay #close-cart {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.page-overlay {
+  display: none; /* Default hidden */
+  width: 100%;
+  height: 300px;
+  background-color: #f0f0f0;
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 60px; /* navbar ke niche */
+  z-index: 1000;
+  flex-wrap: nowrap;
+  padding: 20px; /* thoda inner space */
+  box-sizing: border-box;
+}
+
+
+.page-overlay.active {
+  display: flex; /* Show when active */
+}
+ .product-slider {
+    display: block !important;
+  }
+ .product-item {
+    display: none;
+    width: 100%;
+  }
+  .product-item.active {
+    display: block;
+  }
+
+}
