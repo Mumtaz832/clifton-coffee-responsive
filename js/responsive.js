@@ -97,6 +97,27 @@ buttons.forEach((btn, index) => {
         slides.forEach(slide => slide.classList.add("active"));
     }
 });
+/*gallaery*/ 
+
+/*product-slider-section*/
+let slideIndex = 0;
+const slides = document.querySelectorAll(".product-item");
+
+function showSlides(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[slideIndex].classList.add("active");
+}
+
+function plusDivs(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+// Page load par first slide active
+showSlides(slideIndex);
 
 /*footer section */
 document.querySelectorAll('.footer-section h2').forEach(header => {
