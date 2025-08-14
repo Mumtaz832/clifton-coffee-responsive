@@ -1,9 +1,9 @@
-// Nav-left ko target karo
+// target navleft
 const navLeft = document.querySelector('.nav-left');
 
-// Click pe .open toggle karo
+// Click pe .open toggle 
 navLeft.addEventListener('click', (e) => {
-    // Sirf tab toggle ho jab hamburger area click ho (left 35px ke andar)
+    // when hamburger area click it will toggle
     if (e.offsetX <= 35) {
         navLeft.classList.toggle('open');
     }
@@ -43,7 +43,7 @@ buttons.forEach((btn, index) => {
                 img.style.height = '100%';
                 img.style.objectFit = 'cover';
             });
-        } 
+        }
         else if (index === 1) {
             // Capsule: 4th image
             grid.style.gridTemplateColumns = '1fr';
@@ -54,7 +54,7 @@ buttons.forEach((btn, index) => {
             img.style.width = '100%';
             img.style.height = '100%';
             img.style.objectFit = 'cover';
-        } 
+        }
         else {
             // All: normal grid
             grid.style.gridTemplateColumns = '';
@@ -73,8 +73,8 @@ buttons.forEach((btn, index) => {
 
 /*slider show using arrow*/
 
- 
- document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", function () {
     let slideIndex = 0;
     const slides = document.querySelectorAll(".product-item");
 
@@ -97,24 +97,9 @@ buttons.forEach((btn, index) => {
         slides.forEach(slide => slide.classList.add("active"));
     }
 });
-/*gallaery*/ 
 
 /*product-slider-section*/
-let slideIndex = 0;
-const slides = document.querySelectorAll(".product-item");
 
-function showSlides(n) {
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
-
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[slideIndex].classList.add("active");
-}
-
-function plusDivs(n) {
-    slideIndex += n;
-    showSlides(slideIndex);
-}
 
 // Page load par first slide active
 showSlides(slideIndex);

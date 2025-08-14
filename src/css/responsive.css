@@ -1,0 +1,534 @@
+/* Mobile view (max 768px) */
+@media (max-width: 768px) {
+
+    /* Nav-left me hamburger inject karo */
+    .nav-left {
+        position: relative;
+        padding-left: 35px;
+        /* Space for hamburger */
+    }
+
+    /* Hamburger icon fixed top-left */
+    .nav-left::before {
+        content: "\2630";
+        /* Unicode ☰ */
+        font-size: 26px;
+        position: absolute;
+        /* Hamesha screen ke top par */
+        left: 15px;
+        margin-top: -20px;
+        cursor: pointer;
+        color: white;
+        z-index: 1001;
+        /* Menu se upar */
+    }
+
+    /* Mobile menu open hone par */
+    .nav-left.open {
+        position: absolute;
+        /* Fixed so it overlays */
+        margin-top: initial;
+        left: 0;
+        width: 100%;
+        background: black;
+        padding: 60px 0 15px;
+        /* Top space for hamburger */
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Open hone par list items */
+    .nav-left.open li {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hover effect */
+    .nav-left.open li:hover {
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+
+    /* Hide left and right menus */
+    .nav-left li,
+    .nav-right li {
+        display: none;
+    }
+
+    /* Logo center */
+    .logo {
+        margin-top: 0px;
+        margin-left: 40%;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+
+    /* Icons right openly */
+    .nav-right .icons {
+        display: flex;
+        gap: 15px;
+        font-size: 18px;
+        position: absolute;
+        right: 0px;
+        top: 15px;
+    }
+
+    .product-slider {
+        flex-direction: column;
+    }
+
+    .product-image img {
+        width: 100%;
+    }
+
+    .bg-video {
+        width: 100%;
+    }
+
+
+    .new-products-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*slider section*/
+
+    .new-products-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* center horizontally */
+        gap: 20px;
+    }
+
+    /* Image grid full width aur center */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns in mobile */
+        gap: 10px;
+        width: 100%;
+        max-width: 400px;
+        /* center content within a limit */
+        margin: 0 auto;
+    }
+
+    .products-grid img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Right side products in center */
+    .product-section {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .product-card {
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /*container*/
+    .coffee-banner {
+        background: url("public/images/banners/banner-coffee.jpg") center/cover no-repeat;
+        padding: 40px 15px;
+        /* Top-bottom & side padding */
+        text-align: center;
+        /* Center text */
+        color: white;
+    }
+
+    .coffee-content h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        font-weight: 400;
+    }
+
+    .coffee-content h1 {
+        font-size: 28px;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
+    .coffee-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 320px;
+        /* Limit width */
+        margin: 0 auto;
+    }
+
+    .gallery {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-width: 400px;
+        /* center content within a limit */
+        margin: 0 auto;
+        row-gap: 20px;
+    }
+
+    .product-pagenation {
+        margin-top: 100px;
+    }
+
+    /*capsule section*/
+    .capsule-section {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .capsule-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .capsule-text p {
+        font-size: 0.9rem;
+    }
+
+    .capsule-image {
+        max-width: 200px;
+        height: 250px;
+        /* Smaller image */
+    }
+
+    /*slider*/
+
+    /*review section*/
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+    }
+
+    /*instagram*/
+    .image-slider-section {
+        text-align: center;
+        padding: 20px;
+        background: #fafafa;
+    }
+
+    .image-slider {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .image-slider::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for mobile clean look */
+    }
+
+    .image-wrapper {
+        position: relative;
+        flex: 0 0 auto;
+        width: 200px;
+        /* default size */
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        scroll-snap-align: center;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 10px;
+    }
+
+    /* Overlay icon */
+    .overlay-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 18px;
+        color: #e4405f;
+        transition: 0.3s;
+    }
+
+    .image-wrapper:hover .overlay-icon {
+        background: #e4405f;
+        color: white;
+    }
+
+    /* Dots styling */
+    .slider-dots {
+        margin-top: 15px;
+    }
+
+    .slider-dots .dot {
+        height: 10px;
+        width: 10px;
+        background-color: #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 4px;
+    }
+
+    .slider-dots .dot.active {
+        background-color: #333;
+    }
+
+    .image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    /*footer setion*/
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Accordion Style */
+    .footer-section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10px 0;
+    }
+
+    .footer-section h2 {
+        font-size: 16px;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding-left: 15px;
+    }
+
+    .footer-section h2::after {
+        content: "+";
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section .contact-item {
+        display: none;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* Certified + Contact ko ek line me rakhna */
+    .footer-section.certified,
+    .footer-section.contact {
+        border: none;
+    }
+
+    .footer-section.certified {
+        order: 99;
+        /* neeche le aane ke liye */
+        text-align: left;
+    }
+
+    .footer-section.contact p,
+    .footer-section.contact .contact-item {
+        display: flex !important;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+    }
+
+    /* Contact Us wale h2 ke samne se + hata do */
+    .footer-section.contact h2::after {
+        content: none;
+    }
+
+    /* Certified + Contact ko neeche ek line me */
+    .footer-section.certified {
+        order: 99;
+        text-align: left;
+    }
+
+    .footer-section.contact {
+        order: 100;
+        text-align: right;
+    }
+
+    /* Footer flex wrap */
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+.discover-top{
+    margin-top: 180px;
+}
+    /* Search Overlay */
+    /* Search Overlay Base */
+    #search-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* Full mobile width */
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 999;
+        overflow: hidden;
+        /* Mobile pe scroll avoid */
+    }
+
+    /* Close button */
+    #search-overlay #close-search {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Search box */
+    #search-overlay .search-box {
+        width: 80%;
+        max-width: 600px;
+        border-bottom: 2px solid white;
+    }
+
+    #search-overlay .search-box input {
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    #search-overlay .search-box {
+        width: 90%;
+        max-width: none;
+    }
+
+    #search-overlay .search-box input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #search-overlay #close-search {
+        font-size: 30px;
+        right: 15px;
+        top: 10px;
+    }
+
+    /*cart overlay*/
+    #cart-overlay {
+        position: absolute;
+        float: left;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        /* Initially hidden */
+        flex-direction: column;
+        z-index: 999;
+    }
+
+    #cart-overlay.active {
+        display: flex;
+        /* Show when active */
+    }
+
+    #cart-overlay #close-cart {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .page-overlay {
+        display: none;
+        /* Default hidden */
+        width: 100%;
+        height: 300px;
+        background-color: #f0f0f0;
+        color: black;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        /* navbar ke niche */
+        z-index: 1000;
+        flex-wrap: nowrap;
+        padding: 20px;
+        /* thoda inner space */
+        box-sizing: border-box;
+    }
+
+
+    .page-overlay.active {
+        display: flex;
+        /* Show when active */
+    }
+
+    .product-slider {
+        display: block !important;
+    }
+
+    .product-item {
+        display: none;
+        width: 100%;
+    }
+
+    .product-item.active {
+        display: block;
+    }
+
+    .product-image img {
+        width: 100%;
+        /* poora width le */
+        height: 300px;
+        /* fixed height set karo (apne design ke hisaab se change kar sakti ho) */
+        object-fit: cover;
+        /* image ko crop karke fit kare */
+        border-radius: 8px;
+        /* thoda corner round (optional) */
+    }
+
+}
